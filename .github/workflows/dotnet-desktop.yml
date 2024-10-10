@@ -63,6 +63,8 @@ jobs:
       Wap_Project_Path: "WavChunkReader/WavChunkReader.csproj"  # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
 
     steps:
+    - name: env check
+      run: npm -v
     - name: Checkout
       uses: actions/checkout@v4
       with:
