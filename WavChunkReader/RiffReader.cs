@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WavChunkReader
 {
-    internal class RiffReader
+    public class RiffReader
     {
         private string filePath;
         private StringBuilder _sb = new StringBuilder();
