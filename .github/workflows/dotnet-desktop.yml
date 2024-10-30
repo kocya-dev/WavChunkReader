@@ -61,6 +61,7 @@ jobs:
       #Test_Project_Path: your-test-project-path                 # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
       Wap_Project_Directory: WavChunkReader    # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
       Wap_Project_Path: "WavChunkReader/WavChunkReader.csproj"  # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+      Test_Result_Path: "TestProject2/TestResults/*.trx"
 
     steps:
     - name: ステップ名テスト
@@ -94,7 +95,7 @@ jobs:
       if: success() || failure()
       with:
         name: Tests
-        path: WebApi.Tests/TestResults/*.trx
+        path: ${{ env.Test_Result_Path }}
         reporter: dotnet-trx
     
     # Build
