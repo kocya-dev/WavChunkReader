@@ -92,8 +92,8 @@ jobs:
       run: dotnet workload list
     - name: check
       run: |
-        ls -al
-        ls -al TestProject2/TestResults
+        dir
+        dir TestProject2/TestResults
     - name: Test Report
       uses: dorny/test-reporter@v1
       if: success() || failure()
