@@ -82,8 +82,8 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     # Restore NuGet
-    - name: Restore NuGet packages
-      run: nuget restore $env:Solution_Name
+    # - name: Restore NuGet packages
+    #   run: nuget restore $env:Solution_Name
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
