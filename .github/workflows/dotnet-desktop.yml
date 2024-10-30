@@ -87,7 +87,8 @@ jobs:
     # Execute all unit tests in the solution
     - name: Execute unit tests
       run: dotnet test --logger trx
-
+    - name: list
+      run: dotnet workload list
     - name: Test Report
       uses: dorny/test-reporter@v1
       if: success() || failure()
